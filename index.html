@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f0f4f8, #e0f7fa);
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition: background 0.5s, color 0.5s;
+      }
+
+      .container {
+        text-align: center;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        width: 320px;
+        height: fit-content;
+        width: 50%;
+      }
+
+      .input-section {
+        margin-bottom: 1rem;
+      }
+
+      input {
+        padding: 0.5rem;
+        width: 60%;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 0.5rem;
+      }
+
+      button {
+        margin: 5px;
+        padding: 0.5rem 0.8rem;
+        border: none;
+        border-radius: 10px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #388e3c;
+      }
+
+      .mood-box {
+        width: 100px;
+        height: 100px;
+        background-color: #f3d8d8;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .night-mode {
+        background: #121212;
+        color: #f1f1f1;
+      }
+
+      .night-mode .container {
+        background: #1e1e1e;
+      }
+
+      .night-mode button {
+        background-color: #bb86fc;
+      }
+
+      #greetingText {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: color 1.8s;
+      }
+
+      #mood-text {
+        font-size: 1.95rem;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="mood-text">Personal Mood Dashboard</h1>
+
+      <div class="input-section">
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+        <button id="greetBtn">Greet Me</button>
+        <button id="growBtn">Grow Mood</button>
+        <button id="shrinkBtn">Shrink Mood</button>
+        <button id="toggleModeBtn">Toggle Day/Night</button>
+        <button id="secretBtn">Show/Hide Secret</button>
+      </div>
+
+      <div class="mood-box" id="moodBox">🤸🏻</div>
+
+      <p id="greetingText"></p>
+      <p id="secretMessage" class="hidden">
+        DON'T LET ANYONE OUTWORK YOU, EVER!!!
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
